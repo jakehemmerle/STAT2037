@@ -1,0 +1,3 @@
+[submodule "stemgraphic"]
+	path = stemgraphic
+	url = https://github.com/dionresearch/stemgraphic
