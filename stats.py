@@ -4,12 +4,12 @@ import collections
 from math import floor
 
 
-def get_frequency(number_array):
+def frequency(number_array):
     # Returns dict with unique input array values as keys, number of each value as values
     return collections.Counter(number_array)
 
 
-def get_relative_frequency(number_array):
+def relative_frequency(number_array):
     # Returns 'frequency of item' / 'total number of items'
     total_samples = sum(number_array)
     print("Total samples:  %d" % total_samples)
@@ -20,7 +20,7 @@ def get_relative_frequency(number_array):
     return rel_freq
 
 
-def get_mean(number_array):
+def mean(number_array):
     # Returns the sum of values / total values
     sum = 0
     for value in number_array:
@@ -28,17 +28,17 @@ def get_mean(number_array):
     return sum / len(number_array)
 
 
-def get_median(array):
+def median(array):
     """
     Sorts the array and returns the middle-most element
 
-    >>> get_median([2, 4, 6, 8, 10])
+    >>> median([2, 4, 6, 8, 10])
     6.0
 
-    >>> get_median([2, 5, 7, 8, 9, 12, 13, 23, 65])
+    >>> median([2, 5, 7, 8, 9, 12, 13, 23, 65])
     9.0
 
-    >>> get_median([2, 4, 6, 8, 10, 12])
+    >>> median([2, 4, 6, 8, 10, 12])
     7.0
     """
     array.sort()
@@ -63,11 +63,11 @@ def count_decimals(number):
         return string[::-1].find('.')
 
 
-def get_sample_variance(array):
+def sample_variance(array):
     # BROKEN?
     # Returns sample variance of the array
-    mean = get_mean(array)
-    return sum([(value - mean) ** 2 for value in array]) / len(array) - 1
+    data_mean = mean(array)
+    return sum([(value - data_mean) ** 2 for value in array]) / len(array) - 1
 
 
 def round_to_nearest_interval(array, interval):
