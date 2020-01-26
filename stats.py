@@ -67,7 +67,4 @@ def sample_variance(number_array):
     # Returns sample variance of the array (the s**2)
     data_mean = mean(number_array)
     variance = [(value - data_mean) ** 2 for value in number_array]
-    print(variance)
-    print(len(number_array) - 1)
-    final = sum(variance) / (len(number_array) - 1)
-    return final
+    return sum(variance) / (len(number_array) - 1)
