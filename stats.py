@@ -64,7 +64,7 @@ def count_decimals(number):
 
 
 def get_sample_variance(array):
-    # BROKEN
+    # BROKEN?
     # Returns sample variance of the array
     mean = get_mean(array)
     return sum([(value - mean) ** 2 for value in array]) / len(array) - 1
