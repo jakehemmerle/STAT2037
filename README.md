@@ -20,3 +20,11 @@ Run in your terminal:
 ```pydoc utils/webassign```
 
 ```pydoc stats```
+
+## Testing
+
+Use 'doctest':
+
+```python -m doctest utils/webassign.py```
+
+```python -m doctest stats.py```
