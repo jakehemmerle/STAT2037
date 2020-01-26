@@ -1,8 +1,9 @@
 import sys
 
+# allows import of project files (idk how else to do this)
 sys.path.insert(1, '..')
 from utils.webassign import array_from_shitstring
-from utils.arrays import round_to_nearest_interval
+from stats import round_to_nearest_interval
 
 actual_pressure = array_from_shitstring(
     "128.6  	137.4  	148.4  	140.0  	123.7  	132.0  	118.3  	141.5  	143.2 ")
