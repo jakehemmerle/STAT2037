@@ -1,10 +1,10 @@
 ## Use
 
-*module#/* - weekly modules for University of Cincinnati's STAT2037 class
+**module#/** - weekly modules for University of Cincinnati's STAT2037 class
 
-*utils/webassign.py* - easily parse the red Webassign data into an array
+**utils/webassign.py** - easily parse the red Webassign data into an array
 
-*stats.py* - contains functions for calculating the following on lists of numbers:
+**stats.py** - contains functions for calculating the following on lists of numbers:
 
 - frequency
 - mean
@@ -12,6 +12,9 @@
 - range
 - significant figures of decimals
 - rounding arrays to an interval
+
+**template_problem.py** - good starting point for most Webassign problems, contains some imports
+and other defaults. Copy to another folder (like module#).
 
 ## Documentation
 
