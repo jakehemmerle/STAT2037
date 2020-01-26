@@ -1,7 +1,7 @@
 # Jake Hemmerle
 
 import collections
-from math import floor
+from math import floor, sqrt
 
 
 def frequency(number_array):
@@ -63,8 +63,12 @@ def get_range(number_array):
     return max(number_array) - min(number_array)
 
 
-def sample_variance(number_array):
+def variance(number_array):
     # Returns sample variance of the array (the s**2)
     data_mean = mean(number_array)
-    variance = [(value - data_mean) ** 2 for value in number_array]
-    return sum(variance) / (len(number_array) - 1)
+    sample_variance = [(value - data_mean) ** 2 for value in number_array]
+    return sum(sample_variance) / (len(number_array) - 1)
+
+
+def standard_deviation(number_array):
+    return sqrt(variance(number_array))
