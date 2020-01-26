@@ -16,6 +16,7 @@
   - deviation from mean
 - median
 - range
+- sample variance (s**2)
 
 **template_problem.py** - good starting point for most Webassign problems, contains some imports
 and other defaults. Copy to another folder (like module#).
