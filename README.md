@@ -1,7 +1,5 @@
 ## Use
 
-**module#/** - weekly modules for University of Cincinnati's STAT2037 class
-
 **utils/webassign.py** - easily parse the red Webassign data into an Python list 
 
 **utils/helpers.py** - lets you find:
@@ -21,6 +19,8 @@
 
 **template_problem.py** - good starting point for most Webassign problems, contains some imports
 and other defaults. Copy to another folder (like module#).
+
+**module#/** - weekly modules for University of Cincinnati's STAT2037 class
 
 ## Documentation
 
