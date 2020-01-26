@@ -1,3 +1,5 @@
+
+
 def count_decimals(number):
     # Returns number of decimals of a number
     string = str(number)

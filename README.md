@@ -4,14 +4,18 @@
 
 **utils/webassign.py** - easily parse the red Webassign data into an Python list 
 
+**utils/helpers.py** - lets you find:
+
+- significant figures of decimals
+- round list of numbers to a specific interval (ie. 123.8 to 125 if interval is 5)
+
 **stats.py** - contains functions for calculating the following on lists of numbers:
 
 - frequency
 - mean
+  - deviation from mean
 - median
 - range
-- significant figures of decimals
-- rounding arrays to an interval
 
 **template_problem.py** - good starting point for most Webassign problems, contains some imports
 and other defaults. Copy to another folder (like module#).

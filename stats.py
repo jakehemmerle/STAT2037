@@ -28,7 +28,16 @@ def mean(number_array):
     return sum / len(number_array)
 
 
-def median(array):
+def deviation_from_mean(number_array):
+    """
+    calculate mean on a list and return each point's deviation
+    """
+    calculated_mean = mean(number_array)
+    deviation_list = [number - calculated_mean for number in number_array]
+    return deviation_list
+
+
+def median(number_array):
     """
     Sorts the array and returns the middle-most element
 
@@ -41,21 +50,21 @@ def median(array):
     >>> median([2, 4, 6, 8, 10, 12])
     7.0
     """
-    array.sort()
-    halfway_point = floor(len(array) / 2)
-    if len(array) % 2 == 0:
-        return float((array[halfway_point - 1] + array[halfway_point]) / 2)
+    number_array.sort()
+    halfway_point = floor(len(number_array) / 2)
+    if len(number_array) % 2 == 0:
+        return float((number_array[halfway_point - 1] + number_array[halfway_point]) / 2)
     else:
-        return float(array[halfway_point])
+        return float(number_array[halfway_point])
 
 
-def get_range(array):
+def get_range(number_array):
     # Returns distance between largest and smallest elements
-    return max(array) - min(array)
+    return max(number_array) - min(number_array)
 
 
-def sample_variance(array):
+def sample_variance(number_array):
     # BROKEN?
     # Returns sample variance of the array
-    data_mean = mean(array)
-    return sum([(value - data_mean) ** 2 for value in array]) / len(array) - 1
+    data_mean = mean(number_array)
+    return sum([(value - data_mean) ** 2 for value in number_array]) / len(number_array) - 1
