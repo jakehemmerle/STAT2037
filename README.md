@@ -1,6 +1,8 @@
 ## Use
 
-*utils/webassign.py* - contains helpers for parsing Webassign data into arrays
+*module#/* - weekly modules for University of Cincinnati's STAT2037 class
+
+*utils/webassign.py* - easily parse the red Webassign data into an array
 
 *stats.py* - contains functions for calculating the following on lists of numbers:
 
@@ -8,10 +10,12 @@
 - mean
 - median
 - range
-- calculate decimals
+- significant figures of decimals
+- rounding arrays to an interval
 
 ## Documentation
-You can get the documentation for this project by running:
+
+Run in your terminal:
 
 ```pydoc utils/webassign```
 
