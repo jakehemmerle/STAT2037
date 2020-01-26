@@ -2,7 +2,7 @@
 
 **module#/** - weekly modules for University of Cincinnati's STAT2037 class
 
-**utils/webassign.py** - easily parse the red Webassign data into an array
+**utils/webassign.py** - easily parse the red Webassign data into an Python list 
 
 **stats.py** - contains functions for calculating the following on lists of numbers:
 
