@@ -1,7 +1,7 @@
 # Jake Hemmerle
 
 import collections
-from math import floor, sqrt
+from math import floor, sqrt, factorial
 
 
 def frequency(number_array):
@@ -72,3 +72,11 @@ def variance(number_array):
 
 def standard_deviation(number_array):
     return sqrt(variance(number_array))
+
+
+def permutations(k, n):
+    return factorial(n) / factorial(n - k)
+
+
+def combinations(k, n):
+    return permutations(k, n) / factorial(k)
