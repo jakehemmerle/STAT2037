@@ -12,13 +12,13 @@ import sys
 # allows import of project files (idk how else to do this)
 sys.path.insert(1, PROJECT_ROOT)
 from utils.webassign import array_from_shitstring_floats
-from stats import mean, median, trimmed_mean
+from stats import get_range, variance, standard_deviation
 
-psi_data = array_from_shitstring_floats('14.7	12.9	17.5	14.2	12.1	11.0	9.3	8.0')
-print("PSI data: {}".format(psi_data))
+o2_consumption = array_from_shitstring_floats('29.6	 49.4	 31.0	 28.4	 28.8	 25.4	 34.0	 29.8	 23.8	 30.1')
+print("O2 Consumption: {}".format(o2_consumption))
 
-print("Sample mean: {}".format(mean(psi_data)))
-print("Sample median: {}".format(median(psi_data)))
-print("Trimmed mean 12.5%: {}".format(trimmed_mean(psi_data, .125)))
+print("Sample range: {}".format(get_range(o2_consumption)))
+print("Sample variance: {}".format(variance(o2_consumption)))
+print("Standard deviation: {}".format(standard_deviation(o2_consumption)))
 
 

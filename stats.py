@@ -32,7 +32,7 @@ def trimmed_mean(data_list, trim):
     """
     trim is a value between 0 and .5
     >>> trimmed_mean([14.7, 12.9, 17.5, 14.2, 12.1, 11.0, 9.3, 8.0], .125)
-    []
+    12.366666666666667
     """
 
     trim_index = floor(trim * len(data_list))
