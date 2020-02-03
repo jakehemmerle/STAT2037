@@ -6,17 +6,17 @@ from math import floor, sqrt, factorial
 
 def frequency(number_array):
     # Returns dict with unique input array values as keys, number of each value as values
-    return collections.Counter(number_array)
+    return dict(collections.Counter(number_array))
 
 
-def relative_frequency(number_array):
+def relative_frequency(frequency_array):
     # Returns 'frequency of item' / 'total number of items'
-    total_samples = sum(number_array)
+    total_samples = sum([frequency_array[key] for key in frequency_array])
     print("Total samples:  %d" % total_samples)
 
     rel_freq = {}
-    for number in number_array:
-        rel_freq[number] = number_array[number] / total_samples
+    for number in frequency_array:
+        rel_freq[number] = frequency_array[number] / total_samples
     return rel_freq
 
 
@@ -80,3 +80,12 @@ def permutations(k, n):
 
 def combinations(k, n):
     return permutations(k, n) / factorial(k)
+
+
+# TODO: complete this function
+def inclusion_exclusion(array):
+    """
+    returns union of array of sets, array being:
+    [len(set) for set in sets]
+    example would be [2, 3, 4] first set having 2 elements, second having 3, etc.
+    """

@@ -20,6 +20,18 @@ def array_from_shitstring(shitstring) -> list:
     string_array = string.split()
     number_array = []
     for number in string_array:
+        number_array.append(int(number))
+
+    return number_array
+
+def array_from_shitstring_floats(shitstring) -> list:
+    """
+    Returns a list of numbers from a nasty formatted copied-from-Webassign string (same as above, just raw string as input)
+    """
+    string = shitstring.strip()
+    string_array = string.split()
+    number_array = []
+    for number in string_array:
         number_array.append(float(number))
 
     return number_array
