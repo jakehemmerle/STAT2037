@@ -4,40 +4,52 @@ import collections
 from math import floor, sqrt, factorial
 
 
-def frequency(number_array):
+def frequency(data_list):
     # Returns dict with unique input array values as keys, number of each value as values
-    return dict(collections.Counter(number_array))
+    return dict(collections.Counter(data_list))
 
 
-def relative_frequency(frequency_array):
+def relative_frequency(data_list):
     # Returns 'frequency of item' / 'total number of items'
-    total_samples = sum([frequency_array[key] for key in frequency_array])
+    total_samples = sum([data_list[key] for key in data_list])
     print("Total samples:  %d" % total_samples)
 
     rel_freq = {}
-    for number in frequency_array:
-        rel_freq[number] = frequency_array[number] / total_samples
+    for number in data_list:
+        rel_freq[number] = data_list[number] / total_samples
     return rel_freq
 
 
-def mean(number_array):
+def mean(data_list):
     # Returns the sum of values / total values
     sum = 0
-    for value in number_array:
+    for value in data_list:
         sum += value
-    return sum / len(number_array)
+    return sum / len(data_list)
 
 
-def deviation_from_mean(number_array):
+def trimmed_mean(data_list, trim):
+    """
+    trim is a value between 0 and .5
+    >>> trimmed_mean([14.7, 12.9, 17.5, 14.2, 12.1, 11.0, 9.3, 8.0], .125)
+    []
+    """
+
+    trim_index = floor(trim * len(data_list))
+    trimmed_array = data_list[trim_index:-trim_index]
+    return mean(trimmed_array)
+
+
+def deviation_from_mean(data_list):
     """
     calculate mean on a list and return each point's deviation
     """
-    calculated_mean = mean(number_array)
-    deviation_list = [number - calculated_mean for number in number_array]
+    calculated_mean = mean(data_list)
+    deviation_list = [number - calculated_mean for number in data_list]
     return deviation_list
 
 
-def median(number_array):
+def median(data_list):
     """
     Sorts the array and returns the middle-most element
 
@@ -50,28 +62,28 @@ def median(number_array):
     >>> median([2, 4, 6, 8, 10, 12])
     7.0
     """
-    number_array.sort()
-    halfway_point = floor(len(number_array) / 2)
-    if len(number_array) % 2 == 0:
-        return float((number_array[halfway_point - 1] + number_array[halfway_point]) / 2)
+    data_list.sort()
+    halfway_point = floor(len(data_list) / 2)
+    if len(data_list) % 2 == 0:
+        return float((data_list[halfway_point - 1] + data_list[halfway_point]) / 2)
     else:
-        return float(number_array[halfway_point])
+        return float(data_list[halfway_point])
 
 
-def get_range(number_array):
+def get_range(data_list):
     # Returns distance between largest and smallest elements
-    return max(number_array) - min(number_array)
+    return max(data_list) - min(data_list)
 
 
-def variance(number_array):
+def variance(data_list):
     # Returns sample variance of the array (the s**2)
-    data_mean = mean(number_array)
-    sample_variance = [(value - data_mean) ** 2 for value in number_array]
-    return sum(sample_variance) / (len(number_array) - 1)
+    data_mean = mean(data_list)
+    sample_variance = [(value - data_mean) ** 2 for value in data_list]
+    return sum(sample_variance) / (len(data_list) - 1)
 
 
-def standard_deviation(number_array):
-    return sqrt(variance(number_array))
+def standard_deviation(data_list):
+    return sqrt(variance(data_list))
 
 
 def permutations(k, n):
@@ -83,7 +95,7 @@ def combinations(k, n):
 
 
 # TODO: complete this function
-def inclusion_exclusion(array):
+def inclusion_exclusion(set_list):
     """
     returns union of array of sets, array being:
     [len(set) for set in sets]
