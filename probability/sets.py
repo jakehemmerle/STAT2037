@@ -8,6 +8,7 @@ class Set:
         self.values = values
 
     def add_element(self, element):
+        return
 
 
 class Event(Set):
